@@ -3,10 +3,10 @@ source "https://rubygems.org"
 gem "kramdown"
 gem "kramdown-parser-gfm"
 gem "rouge"
-gem "jekyll-paginate"
-gem "jekyll-paginate-content"
+gem "jekyll-paginate", "1.1.0"
+gem "jekyll-paginate-content", "1.1.0"
 gem "json"
-gem "jekyll", "~> 4.2"
+gem "jekyll", "~> 3.8"
 group :jekyll_plugins do
   gem "jekyll-timeago", "~> 0.13.1"
 end
