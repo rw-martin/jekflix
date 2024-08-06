@@ -13,3 +13,4 @@ group :jekyll_plugins do
 end
 
 gem "github-pages", group: :jekyll_plugins
+gem 'bundler', '~> 2.5', '>= 2.5.17'
