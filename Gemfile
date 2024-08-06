@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+#gem "github-pages", group: :jekyll_plugins
+gem 'github-pages', '~> 232'
 gem "jekyll", "~> 4.2"
 gem "kramdown"
 gem "kramdown-parser-gfm"
