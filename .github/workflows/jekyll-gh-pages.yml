@@ -30,8 +30,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: install-dependencies
-        run: bundle install   
+
+      - name: Install dependencies
+        run: |
+          echo "Gemfile content:"
+          cat Gemfile
+          echo "Running bundle install with verbose output..."
+          bundle install --verbose
+        
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
