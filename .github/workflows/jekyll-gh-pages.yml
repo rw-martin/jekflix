@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: |
           echo "Running bundle install with verbose output..."    
-          bundle config set path 'vendor/bundle'
+          # bundle config set path 'vendor/bundle'
           gem install jekyll bundler
           #bundle install
 
