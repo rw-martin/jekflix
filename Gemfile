@@ -12,5 +12,5 @@ gem "json"
 group :jekyll_plugins do
   gem "jekyll-timeago", "~> 0.13.1"
 end
-gem 'jekyll', '~> 4.2.0'
+gem 'jekyll'
 gem 'public_suffix', '~> 6.0.1'
