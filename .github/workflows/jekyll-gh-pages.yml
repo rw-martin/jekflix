@@ -33,9 +33,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          echo "Gemfile content:"
-          cat Gemfile
           echo "Running bundle install with verbose output..."    
+          bundle config set path 'vendor/bundle'
           gem install jekyll bundler
           #bundle install
 
