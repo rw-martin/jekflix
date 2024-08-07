@@ -35,9 +35,10 @@ jobs:
         run: |
           echo "Gemfile content:"
           cat Gemfile
-          echo "Running bundle install with verbose output..."
-          bundle install --verbose
-        
+          echo "Running bundle install with verbose output..."    
+          gem install jekyll bundler
+          bundle install
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
