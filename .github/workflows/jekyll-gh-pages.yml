@@ -32,12 +32,12 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
+        with:
+          destination: ./vendor-gems
         run: |
           echo "Running bundle install with verbose output..."    
-          # bundle config set path 'vendor/bundle'
           gem install jekyll bundler
-          #bundle install
-
+      
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
