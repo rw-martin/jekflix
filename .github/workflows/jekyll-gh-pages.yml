@@ -32,6 +32,7 @@ jobs:
         uses: actions/configure-pages@v5
 
   # Use GitHub Actions' cache to shorten build times and decrease load on servers
+      - name:xxyzzy
       - uses: actions/cache@v2
          with:
            path: vendor/bundle
