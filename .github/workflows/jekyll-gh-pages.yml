@@ -36,7 +36,7 @@ jobs:
           echo "Running bundle install with verbose output..."    
           sudo gem install jekyll bundler #--verbose
           sudo gem install json
-          sudo gem install jekyll-paginate-content
+          # sudo gem install jekyll-paginate-content
           sudo gem install jekyll-timeago
           sudo gem install mini_i18n
           sudo gem install ffi
