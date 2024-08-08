@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: |
           echo "Running bundle install with verbose output..."    
-          gem install jekyll bundler
+          gem install jekyll bundler --user-install
           bundle install
       
       - name: Build with Jekyll
