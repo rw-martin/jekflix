@@ -36,7 +36,7 @@ jobs:
           export PATH=$PATH:/home/runner/.local/share/gem/ruby/3.0.0/bin
           echo $PATH
           echo "Running bundle install with verbose output..."    
-          sudo gem install jekyll bundler
+          gem install jekyll bundler
           bundle config set path 'vendor/bundle'      
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
