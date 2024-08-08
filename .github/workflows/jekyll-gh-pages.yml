@@ -34,6 +34,7 @@ jobs:
       - name: Install dependencies
         run: |
           echo "Running bundle install with verbose output..."    
+          export GEM_HOME=$HOME/.gem/ruby/3.1.0/
           gem install jekyll bundler #--verbose
           bundle install
       
