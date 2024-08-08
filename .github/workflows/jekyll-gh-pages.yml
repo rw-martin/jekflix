@@ -37,8 +37,7 @@ jobs:
           echo $PATH
           echo "Running bundle install with verbose output..."    
           sudo gem install jekyll bundler
-          sudo bundle install 
-      
+          bundle config set path 'vendor/bundle'      
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
