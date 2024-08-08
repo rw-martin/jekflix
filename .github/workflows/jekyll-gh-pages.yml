@@ -34,8 +34,8 @@ jobs:
       - name: Install dependencies
         run: |
           echo "Running bundle install with verbose output..."    
-          gem install jekyll bundler #--verbose
-          sudo bundle install 
+          sudo gem install jekyll bundler #--verbose
+          bundle install 
       
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
