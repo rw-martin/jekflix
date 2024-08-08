@@ -35,7 +35,7 @@ jobs:
         run: |
           echo "Running bundle install with verbose output..."    
           sudo gem install jekyll bundler #--verbose
-          gem install json
+          sudo gem install json
           sudo bundle install 
       
       - name: Build with Jekyll
