@@ -35,6 +35,7 @@ jobs:
         run: |
           export PATH=$PATH:/home/runner/.local/share/gem/ruby/3.0.0/bin
           echo $PATH
+          mkdir /home/runner/rwm-site
           echo "Running bundle install with verbose output..."    
           sudo gem install jekyll bundler
           bundle config set path 'vendor/bundle'      
@@ -46,9 +47,8 @@ jobs:
      
       - name: Copy Jekyll site files to gh-pages
         run: |
-          mkdir /home/runner/rwm-site
-          ls -la /home/runner
-          cp -R /home/runner/rwm-site/* .
+          ls -la /home/runner/rwm-site
+          # cp -R /home/runner/rwm-site/. .
 
       - name: Switch to gh-pages branch
         run: |
