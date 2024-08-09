@@ -81,4 +81,4 @@ jobs:
           git commit -m "Update files from GitHub Actions"
           git push origin gh-pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
