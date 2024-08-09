@@ -62,4 +62,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
       - name: check contents
-         run: ls -la /github/workspace/_site/
+         run: |
+           ls -la /github/workspace/_site
