@@ -52,7 +52,7 @@ jobs:
       - name: Copy Jekyll site files to gh-pages
         run: |
           git fetch
-          git checkout gh-pages || git checkout --orphan gh-pages
+          git checkout gh-pages #|| git checkout --orphan gh-pages
           git rm -rf .  # Clean the working directory
           cp -R /home/runner/rwm-site/* .
 
