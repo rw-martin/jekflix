@@ -59,11 +59,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
     
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+#      - name: Deploy to GitHub Pages
+ #       uses: peaceiris/actions-gh-pages@v3
+  #      with:
+   #       github_token: ${{ secrets.GITHUB_TOKEN }}
+    #      publish_dir: ./_site
 
       - name: List artifacts
         run: ls -la ${{ github.workspace }}
@@ -76,9 +76,9 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git checkout gh-pages
-          git checkout master -- .
+          git checkout master .
           git add .
           git commit -m "Update files from GitHub Actions"
-          git push origin gh-pages --force
+          git push origin gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
