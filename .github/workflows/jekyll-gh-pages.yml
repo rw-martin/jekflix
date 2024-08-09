@@ -67,7 +67,7 @@ jobs:
           publish_dir: ./_site
 
       - name: List artifacts
-        run: ls ${{ github.workspace }}/../_actions
+        run: ls -la ${{ github.workspace }}
 
       - name: Download artifact (optional)
         uses: actions/download-artifact@v3
