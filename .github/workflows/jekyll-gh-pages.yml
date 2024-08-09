@@ -69,16 +69,17 @@ jobs:
       - name: List artifacts
         run: ls -la ${{ github.workspace }}
 
-      - name: Download artifact (optional)
-        uses: actions/download-artifact@v3
-        with:
-          name: github-pages.zip  # Replace with the actual name of the uploaded artifact
-
-      - name: Create target directory
-        run: mkdir -p /home/runner/work/jekflix/jekflix/build-output
-
-      - name: Extract tar file
+      - name: Set up Git
         run: |
-          tar -xzf github-pages.zip -C /home/runner/work/jekflix/jekflix/build-output
-        working-directory: ${{ github.workspace }}
-     
+        git config --global user.email "rw-martin@users.noreply.github.com"
+        git config --global user.name "rw-martin"
+
+      - name: Commit and Push Changes
+        run: |
+        git checkout master
+        cp -R $GITHUB_WORKSPACE/* .
+        git add .
+        git commit -m "Update files from GitHub Actions"
+        git push origin master --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
