@@ -38,7 +38,7 @@ jobs:
           mkdir /home/runner/rwm-site
           echo "Running bundle install with verbose output..."    
           sudo gem install jekyll bundler
-          bundle config set path 'vendor/bundle'      
+         # bundle config set path 'vendor/bundle'      
           sudo bundle exec jekyll build
 #      - name: Build with Jekyll
 ##        uses: actions/jekyll-build-pages@v1
