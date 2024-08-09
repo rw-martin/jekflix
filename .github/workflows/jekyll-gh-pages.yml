@@ -74,6 +74,6 @@ jobs:
 
       - name: Extract tar file
         run: |
-          tar -xzf github-pages.zipß -C /home/runner/work/jekflix/jekflix/build-output
+          tar -xzf github-pages.zip -C /home/runner/work/jekflix/jekflix/build-output
         working-directory: ${{ github.workspace }}
      
