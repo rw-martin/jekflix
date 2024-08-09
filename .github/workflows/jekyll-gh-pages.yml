@@ -56,6 +56,11 @@ jobs:
           git rm -rf .  # Clean the working directory
           cp -R /home/runner/rwm-site .
 
+      - name: Set up Git
+        run: |
+          git config --global user.email "rw-martin@users.noreply.github.com"
+          git config --global user.name "rw-martin"
+
       - name: Commit and Push Changes
         run: |
           git add .
