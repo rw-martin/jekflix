@@ -79,6 +79,6 @@ jobs:
           cp -R $GITHUB_WORKSPACE/* .
           git add .
           git commit -m "Update files from GitHub Actions"
-          git push origin master --force
+          git push origin gh-pages --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
