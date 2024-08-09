@@ -66,6 +66,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
 
+      - name: List artifacts
+        run: ls ${{ github.workspace }}/../_actions
+
       - name: Download artifact (optional)
         uses: actions/download-artifact@v3
         with:
