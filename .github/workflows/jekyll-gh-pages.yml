@@ -43,12 +43,13 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
-          destination: /home/runner/rwm-site
+          destination: site
      
       - name: Copy Jekyll site files to gh-pages
         run: |
+          ls -la /github/workspace/site
+          cp -R $GITHUB_WORKSPACE/* /home/runner/rwm-site/.
           ls -la /home/runner/rwm-site
-          # cp -R /home/runner/rwm-site/. .
 
       - name: Switch to gh-pages branch
         run: |
