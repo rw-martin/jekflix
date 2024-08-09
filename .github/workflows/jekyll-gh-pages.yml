@@ -46,6 +46,7 @@ jobs:
      
       - name: Copy Jekyll site files to gh-pages
         run: |
+          mkdir /home/runner/rwm-site
           ls -la /home/runner
           cp -R /home/runner/rwm-site/* .
 
