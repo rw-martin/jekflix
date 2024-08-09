@@ -33,18 +33,28 @@ jobs:
      
       - name: Install dependencies
         run: |
-          export PATH=$PATH:/home/runner/.local/share/gem/ruby/3.0.0/bin
-          echo $PATH
           mkdir /home/runner/rwm-site
           echo "Running bundle install with verbose output..."    
-   #       sudo gem install jekyll bundler
-          # bundle config set path 'vendor/bundle'      
-    #      sudo bundle exec jekyll build
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+          
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-         source: ./
-         destination: site
+        ruby-version: '3.0'  # Adjust the Ruby version as needed
+
+      - name: Install dependencies
+        run: |
+          sudo gem install bundler
+          sudo bundle install
+
+      - name: Build Jekyll site
+        run: sudo bundle exec jekyll build -d site  # Output the site to the 'site' directory
+    
+    
+    #  - name: Build with Jekyll
+    #    uses: actions/jekyll-build-pages@v1
+    #    with:
+    #     source: ./
+    #     destination: site
      
       - name: Copy Jekyll site files to gh-pages
         run: |
