@@ -63,4 +63,17 @@ jobs:
           publish_dir: ./_site
       - name: check contents
         run: |
-           ls -la /github/workspace/_site
+         
+      - name: Download artifact (optional)
+        uses: actions/download-artifact@v3
+        with:
+          name: site-tar  # Replace with the actual name of the uploaded artifact
+
+      - name: Create target directory
+        run: mkdir -p /home/runner/work/jekflix/jekflix/build-output
+
+      - name: Extract tar file
+        run: |
+          tar -xzf github-pages.zipß -C /home/runner/work/jekflix/jekflix/build-output
+        working-directory: ${{ github.workspace }}
+     
