@@ -72,7 +72,9 @@ jobs:
           git rm -rf .  # Clean the working directory
 
       - name: Copy Jekyll site files to gh-pages
-        run: cp -R /github/workspace/./site/* .
+        run: |
+          ls -la /github/workspace/. 
+#          cp -R /github/workspace/./site/* .
 
       - name: Commit and Push Changes
         run: |
